@@ -82,4 +82,40 @@ df['Birth Day'] = df['Date of Birth'].dt.day
 
 # 4. Display the cleaned DataFrame with text operations applied
 print("\nModified DataFrame with Text Operations:\n", df)
+====================================
+Original DataFrame:
+               Name  Age           City                     Email Date of Birth
+0        john doe    28       new york      john.doe@example.com    1993-05-15
+1       anna smith   24         berlin      anna.smith@berlin.de    1997-08-22
+2        peter pan   35         london    peter.pan@london.co.uk    1986-12-10
+3          lucy li   40       new york            lucy.li@ny.com    1981-03-03
+4  michael johnson   22  san francisco  michael.johnson@sfrc.com    2000-09-28
 
+Modified DataFrame with Text Operations:
+          Full Name  Age       Location                     Email  \
+0         John doe   28            NYC      john.doe@example.com   
+1       Anna smith   24         Berlin      anna.smith@berlin.de   
+2        Peter pan   35         London    peter.pan@london.co.uk   
+3          Lucy li   40            NYC            lucy.li@ny.com   
+4  Michael johnson   22  San Francisco  michael.johnson@sfrc.com   
+
+  Date of Birth  Name Length First Name  Email Domain  Has John  \
+0    1993-05-15            8       John   example.com      True   
+1    1997-08-22           10       Anna     berlin.de     False   
+2    1986-12-10            9      Peter  london.co.uk     False   
+3    1981-03-03            7       Lucy        ny.com     False   
+4    2000-09-28           15    Michael      sfrc.com      True   
+
+  Location Upper Email Prefix  Is .com Email             Name & Location  \
+0            NYC          joh           True               John from NYC   
+1         BERLIN          ann          False            Anna from Berlin   
+2         LONDON          pet          False           Peter from London   
+3            NYC          luc           True               Lucy from NYC   
+4  SAN FRANCISCO          mic           True  Michael from San Francisco   
+
+  Email User  Birth Year  Birth Month  Birth Day  
+0       john        1993            5         15  
+1       anna        1997            8         22  
+2      peter        1986           12         10  
+3       lucy        1981            3          3  
+4    michael        2000            9         28  
